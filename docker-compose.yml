@@ -1,0 +1,25 @@
+services:
+  vrcx:
+    # 方式一：从源码构建（默认）
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # 方式二：从 Docker Hub 拉取（取消注释下面这行，注释掉 build）
+    # image: yourusername/vrcx-docker:latest
+    container_name: vrcx
+    restart: unless-stopped
+    ports:
+      - "6080:6080"          # noVNC Web 访问
+      # - "5900:5900"        # VNC 直连 (可选，默认关闭)
+    volumes:
+      - ./vrcx-data/AppData:/root/.config/VRCX  # VRCX 数据库/配置持久化
+    environment:
+      - TZ=Asia/Shanghai
+      - RESOLUTION=1920x1080   # 虚拟桌面分辨率，可自行调整
+    shm_size: "256m"         # Electron/Chromium 需要
+    # 资源限制（可选，按需启用）
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '2'
+    #       memory: 2G

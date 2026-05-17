@@ -1,0 +1,12 @@
+# VRCX 用户数据（含数据库/配置/缓存，不提交）
+vrcx-data/
+
+# Docker 构建产物
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
