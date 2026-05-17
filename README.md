@@ -22,20 +22,8 @@ cd vrcx-docker
 docker compose up -d
 ```
 
-浏览器打开 `http://你的NASIP:6080`
+浏览器打开 `http://IP:6080`
 
-### 方式二：从 Docker Hub 拉取
-
-```bash
-docker run -d \
-  --name vrcx \
-  -p 6080:6080 \
-  -v ./vrcx-data:/root/.config/VRCX \
-  -e TZ=Asia/Shanghai \
-  -e RESOLUTION=1920x1080 \
-  --shm-size=256m \
-  ssldxss/vrcx-docker:latest
-```
 
 ## ⚙️ 配置
 
