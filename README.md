@@ -17,7 +17,7 @@ VRCX 是 VRChat 的好友/通知/日志管理工具，本项目将其打包为 D
 ### 方式一：docker compose（推荐）
 
 ```bash
-git clone https://github.com/sihenglu080229/vrcx-docker.git
+git clone https://github.com/ssldxss/vrcx-docker.git
 cd vrcx-docker
 docker compose up -d
 ```
