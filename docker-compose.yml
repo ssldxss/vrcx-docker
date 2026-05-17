@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     # 方式二：从 Docker Hub 拉取（取消注释下面这行，注释掉 build）
-    # image: sihenglu/vrcx-docker:latest
+    # image: ssldxss/vrcx-docker:latest
     container_name: vrcx
     restart: unless-stopped
     ports:

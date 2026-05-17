@@ -34,7 +34,7 @@ docker run -d \
   -e TZ=Asia/Shanghai \
   -e RESOLUTION=1920x1080 \
   --shm-size=256m \
-  sihenglu/vrcx-docker:latest
+  ssldxss/vrcx-docker:latest
 ```
 
 ## ⚙️ 配置
